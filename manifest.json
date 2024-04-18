@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Image Cropper",
+    "version": "1.0",
+    "description": "Crop the bottom part of an image",
+    "icons": {
+        "16": "cc.ico",
+        "48": "cc.ico",
+        "128": "cc.ico"
+    },
+    "permissions": [
+      "activeTab",
+      "contextMenus",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
